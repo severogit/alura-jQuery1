@@ -1,13 +1,13 @@
 var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
 
-// nesse caso -- $ = atalho para $(document).ready
+// nesse caso -- $ é um atalho para $(document).ready
 
 $(function(){
-    console.log("pagina carregou");
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaCronometro();
+    inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
 });
 
@@ -45,3 +45,22 @@ function inicializaCronometro(){
     });
     }
 
+function inicializaMarcadores(){
+var frase = $(".frase").text();
+campo.on("input",function(){
+    var digitado = campo.val();
+    var comparavel = frase.substr(0, digitado.length);
+    
+    if(digitado == comparavel){
+        campo.addClass("borda-azul");
+        campo.addClass("borda-invisivel");
+        campo.removeClass("borda-vermelha");
+        campo.removeClass("borda-padrao");
+    }else{
+        campo.addClass("borda-vermelha");
+        campo.addClass("borda-invisivel");
+        campo.removeClass("borda-azul");
+        campo.removeClass("borda-padrao");
+        }
+    });
+}
