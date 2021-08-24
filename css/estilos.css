@@ -5,7 +5,6 @@
 .campo-digitacao{
     font-size: 20px;
     height: 120px;
-    border: 3px solid black;
 } 
 .frase{
     font-size: 20px;
@@ -13,5 +12,21 @@
 }
 
 .campo-desativado{
-    background-color: lightblue;
+    background-color: lightgray;
+}
+
+.borda-padrao{
+    border: 3px solid black;
+}
+
+.borda-azul{
+    border: 3px solid blue;
+}
+
+.borda-vermelha{
+    border: 3px solid red;
+}
+
+.borda-invisivel{
+    outline: none;
 }
