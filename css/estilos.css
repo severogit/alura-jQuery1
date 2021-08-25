@@ -51,3 +51,9 @@ body{
 .background-dark{
     background-color: #3e4346; 
  }
+
+ #erro{
+     color: red;
+     font-weight: bold;
+     display: none;
+ }
