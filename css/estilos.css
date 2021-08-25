@@ -56,4 +56,9 @@ body{
      color: red;
      font-weight: bold;
      display: none;
+     font-size: 22px;
+ }
+
+ #spinner{
+     display: none;
  }
