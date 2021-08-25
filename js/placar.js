@@ -6,10 +6,22 @@ function inserePlacar(){
     var numPalavras = $("#contador-palavras").text();
 
     var linha = novaLinha(usuario, numPalavras);
-    linha.find(".botao-remover").click(removeLinha)
+    linha.find(".botao-remover").click(removeLinha);
 
     corpoTabela.prepend(linha);
+
+    $(".placar").slideDown(500);
+    scrollPlacar();
 };
+
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;   
+    $("html, body").animate(
+        {
+            scrollTop: posicaoPlacar + "px"
+        }, 1000);
+    }
+
 
 function novaLinha(usuario, numPalavras){
     var linha = $("<tr>");
@@ -44,5 +56,5 @@ $(".botao-remover").click(function(event){
 }
 
 function mostraPlacar(){
-    $(".placar").slideToggle(500);
+    $(".placar").stop().slideToggle(500);
 };
