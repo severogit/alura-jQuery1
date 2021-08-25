@@ -62,3 +62,7 @@ body{
  #spinner{
      display: none;
  }
+
+ #frase-id{
+     width: 50px;
+ }
