@@ -30,3 +30,12 @@
 .borda-invisivel{
     outline: none;
 }
+
+.placar{
+    display: none;
+}
+
+/* reserva um espaço para a barra de scroll, não mexendo no texto quando ela é adicionada */
+body{
+    overflow: scroll;
+}

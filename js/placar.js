@@ -1,3 +1,5 @@
+$("#botao-placar").click(mostraPlacar);
+
 function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "svr";
@@ -35,3 +37,7 @@ $(".botao-remover").click(function(event){
     $(this).parent().parent().remove();
 });
 }
+
+function mostraPlacar(){
+    $(".placar").slideToggle(500);
+};
