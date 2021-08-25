@@ -105,7 +105,7 @@ function novaLinha(usuario, numPalavras){
 
 function modoDark(){
     console.log("clik");
-    $("html,body").toggleClass("botao-dark");
+    $("html,body").toggleClass("background-dark");
     $("html,body").toggleClass("fonte-dark");
     };
 
