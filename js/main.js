@@ -1,5 +1,6 @@
 var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
+var body = $(".bodyclass");
 
 // nesse caso -- $ é um atalho para $(document).ready
 
@@ -9,6 +10,7 @@ $(function(){
     inicializaCronometro();
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
+    $("#botao-dark").click(modoDark);
 });
 
 function atualizaTamanhoFrase(){
@@ -100,3 +102,11 @@ function novaLinha(usuario, numPalavras){
     
     return linha;
 }
+
+function modoDark(){
+    console.log("clik");
+    body.toggleClass("botao-dark");
+    body.toggleClass("fonte-dark");
+    };
+
+

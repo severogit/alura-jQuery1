@@ -39,3 +39,11 @@
 body{
     overflow: scroll;
 }
+
+.botao-dark{
+   background-color: #3e4346; 
+}
+
+.fonte-dark{
+    color: white;
+}
