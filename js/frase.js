@@ -9,4 +9,6 @@ function trocaFraseAleatoria(data){
     var numeroAleatorio = Math.ceil(Math.random() * data.length);
 
     frase.text(data[numeroAleatorio].texto);
+    atualizaTamanhoFrase();
+    atualizaTempoInicial(data[numeroAleatorio].tempo);
 }
