@@ -11,6 +11,7 @@ $(function(){
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
     $("#botao-dark").click(modoDark);
+    atualizaPlacar();
 });
 
 function atualizaTempoInicial(tempo){
