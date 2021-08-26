@@ -12,6 +12,10 @@ $(function(){
     $("#botao-reiniciar").click(reiniciaJogo);
     $("#botao-dark").click(modoDark);
     atualizaPlacar();
+    $("#usuarios").selectize({
+        create: true,
+        sortField: 'text'
+    });
 });
 
 function atualizaTempoInicial(tempo){
