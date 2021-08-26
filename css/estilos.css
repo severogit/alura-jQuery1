@@ -40,10 +40,6 @@ body{
     overflow: scroll;
 }
 
-#botao-dark{
-   margin-left: 1000px;
-}
-
 .fonte-dark{
     color: white;
 }
@@ -65,4 +61,8 @@ body{
 
  #frase-id{
      width: 50px;
+ }
+
+ #botao-sync{
+     float:right;
  }
