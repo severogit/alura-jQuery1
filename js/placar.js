@@ -24,10 +24,10 @@ function scrollPlacar() {
     }
 
 
-function novaLinha(usuario, numPalavras){
+function novaLinha(usuario, palavras){
     var linha = $("<tr>");
     var colunaUsuario = $("<td>").text(usuario);
-    var colunaPalavras = $("<td>").text(numPalavras);
+    var colunaPalavras = $("<td>").text(palavras);
     var colunaRemover = $("<td>");
 
     var link = $("<a>").addClass("botao-remover").attr("href","#");
@@ -83,5 +83,17 @@ function sincronizaPlacar(){
     $.post("http://localhost:3000/placar", dados,function(){
         console.log("Salvou o pl");
 })
+
+}
+
+function atualizaPlacar(){
+    $.get("http://localhost:3000/placar", function(data){
+
+        $(data).each(function(){
+            var linha = novaLinha(this.usuario, this.pontos);
+            $("tbody").prepend(linha);
+        });
+
+    });
 
 }
